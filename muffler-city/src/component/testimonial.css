@@ -1,0 +1,59 @@
+.testimonial-card {
+   display: grid;
+   width: 500px;
+   height: 245px;
+   border: 1px solid #ccc;
+   background-color: white;
+   gap: 5px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   grid-template-columns: auto 1fr; /* Adjust based on your design */
+   border-radius: 10px;
+}
+
+.testimonial-image img {
+   width: 100%; /* Adjust image width as needed */
+   border-radius: 50%; /* Circular image */
+   max-width: 120px; /* Adjust based on your design */
+   padding-left: 4px;
+   padding-top: 7px;
+}
+
+.testimonial-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.testimonial-content p {
+   font-style: italic; /* Styling for testimonial text */
+}
+
+.testimonial-content h5 {
+   margin-top: 10px; /* Space above the name */
+   font-weight: bold;
+}
+
+.inner-cardDive {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   padding-top: 4rem;
+}
+
+@media (max-width: 600px) {
+   .testimonial-card {
+      width: 300px;
+      height: 170px;
+   }
+
+
+   .inner-cardDive{
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: small;
+  
+   }
+}
+
+
