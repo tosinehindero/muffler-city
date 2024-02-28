@@ -17,8 +17,6 @@ This project is a business website designed for a mechanic shop, aimed at provid
 
 ## Features
 
-List the main features of your project. You can include bullet points or descriptions.
-
 - Users can schedule vehicle service appointments via form.
 - Users can view list of services offered.
 - business information for new hires is provided on site for users to view
@@ -27,13 +25,27 @@ List the main features of your project. You can include bullet points or descrip
 
 Provide instructions on how to install your project, including any dependencies or prerequisites.(to be comnpleted)
 
-1. Step 1
-2. Step 2
-3. Step 3
+1. Fork the Repository: Contributors should fork this repository to their GitHub accounts by clicking the "Fork" button at the top-right corner of the   repository page.
+2. Set Up Database:
+- Create a PostgreSQL database named mufflerdb.
+- Configure your database connection settings in the .env file. An example .env file might look like this:
+- PORT=3001
+  DB_USER=postgres
+  DB_PASS=tosin
+  DB_HOST=localhost
+  DB_PORT=5432
+  DB_NAME=mufflerdb
+3. Run Migrations: Execute the database migrations to set up the required tables by running the following command:knex migrate:latest
+4.  Run Seed File: Seed the database with initial data by running the seed file : knex seed:run
+5.  cd into muffler-city and mufflerCity-backend and npm install to install project dependancies simutaneously.
+6.  npm run start to start the backend.
+7.  npm run dev to start the front-end.
+8.  Access the Application: Access the application by opening a web browser and navigating to http://localhost:3001 
+
 
 ## Usage
 
-Provide examples or instructions on how to use your project. Include code snippets, screenshots, or gifs if applicable.
+to be added-
 
 
 

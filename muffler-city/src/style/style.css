@@ -209,10 +209,10 @@
    width: 45%;
    height: 35rem;
    border-radius: 5px;
-   border: 2px solid; /* Added border style for consistency */
-   display: flex; /* Add display flex */
-   justify-content: center; /* Center horizontally */
-   align-items: center; /* Center vertically */
+   border: 2px; 
+   display: flex;
+   justify-content: center; 
+   align-items: center; 
  }
 
 
