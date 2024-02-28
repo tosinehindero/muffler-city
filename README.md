@@ -9,7 +9,7 @@ muffler-city is a business website with interactive intake form for services off
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## About
 
