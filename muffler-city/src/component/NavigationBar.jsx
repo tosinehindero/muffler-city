@@ -2,7 +2,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -11,15 +11,13 @@ import logo from "../assets/logo.jpg";
 import { Link } from "react-router-dom";
 import { useAuth } from "./store/Auth-Context";
 
-
 export default function NavigationBar() {
-   const { isLoggedIn, userEmail, custEmail, logout, Custlogout, isCustLoggedIn } = useAuth();
+   const { isLoggedIn, userEmail, custEmail, logout, Custlogout, isCustLoggedIn } =
+      useAuth();
 
-
-   const handleLogout =()=>{
+   const handleLogout = () => {
       logout();
       Custlogout();
-      
    };
 
    return (
@@ -66,17 +64,23 @@ export default function NavigationBar() {
                      </NavDropdown.Item>
                   </NavDropdown>
                </Nav>
-               <Form className="d-flex">
-                  {isLoggedIn || isCustLoggedIn && (
-                     <h6 style={{ color: "white", marginRight: "1rem" }}>
-                        {userEmail || custEmail}
-                     </h6>
-                  )}
-                 {isLoggedIn || isCustLoggedIn && ( <Button onClick={handleLogout} variant="outline-light">logout</Button>)}
-               </Form>
+
+               {isLoggedIn || isCustLoggedIn ? (
+                  <h6 style={{ color: "white", marginRight: "1rem" }}>
+                     {userEmail || custEmail}
+                  </h6>
+               ) : (
+                  ""
+               )}
+               {isLoggedIn || isCustLoggedIn ? (
+                  <Button onClick={handleLogout} variant="outline-light">
+                     logout
+                  </Button>
+               ) : (
+                  ""
+               )}
             </Navbar.Collapse>
          </Container>
       </Navbar>
    );
 }
-
