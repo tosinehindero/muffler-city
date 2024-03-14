@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import ServiceDatePicker from './ServiceDatePicker';
 
 
-function ContactUsModal(props) {
+function ServiceSchedulerModal(props) {
   return (
     <Modal
       {...props}
@@ -61,4 +61,4 @@ function ContactUsModal(props) {
   )
 }
 
-export default ContactUsModal
+export default ServiceSchedulerModal
